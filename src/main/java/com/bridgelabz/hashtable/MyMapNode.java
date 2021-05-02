@@ -11,6 +11,9 @@ public class MyMapNode<K,V> implements INode<K>{
         next = null ;
     }
 
+    public <V> MyMapNode(V value) {
+    }
+
     @Override
     public K getKey() {
         return key;

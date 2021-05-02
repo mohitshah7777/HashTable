@@ -20,7 +20,12 @@ public class MyLinkedList<K> {
             this.tail = newNode;
             tempNode.setNext(newNode);
         }
+    }
 
+    public INode pop(INode<K> deleteNode) {
+        INode  tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
     }
 
     public INode<K> search(K key) {
@@ -37,4 +42,6 @@ public class MyLinkedList<K> {
     public String toString() {
         return "MyLinkedListNodes{" + head + '}';
     }
+
+
 }
